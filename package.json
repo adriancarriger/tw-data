@@ -1,0 +1,17 @@
+{
+  "name": "tw-data",
+  "version": "1.0.0",
+  "description": "My Prisma Service",
+  "scripts": {
+    "start": "nodemon --config config/nodemon.json",
+    "build": "prisma deploy"
+  },
+  "devDependencies": {
+    "graphql-cli": "2.16.3",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "prisma-binding": "^2.1.0",
+    "typescript": "^2.9.2"
+  }
+}

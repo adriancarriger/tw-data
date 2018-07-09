@@ -1,0 +1,16 @@
+# The endpoint of your Prisma API (deployed to a Prisma Sandbox).
+endpoint: ${env:PRISMA_ENDPOINT}
+
+# The file containing the definition of your data model.
+datamodel: datamodel.graphql
+
+# Seed your service with initial data based on `seed.graphql`.
+seed:
+  import: seed.graphql
+
+hooks:
+  post-deploy:
+    - graphql get-schema
+    - graphql codegen
+
+secret: ${env:PRISMA_SECRET}
