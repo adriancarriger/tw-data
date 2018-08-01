@@ -12,3 +12,15 @@ Data layer based on [Prisma](https://github.com/prismagraphql/prisma).
 - [tw-data](https://github.com/adriancarriger/tw-data)
 - [tw-server](https://github.com/adriancarriger/tw-server)
 - [tw-app](https://github.com/adriancarriger/tw-app)
+
+## Usage
+
+- `docker-compose exec data prisma token`
+- Go to [http://localhost:4466](http://localhost:4466)
+- Click `HTTP HEADERS` and add your token like this:
+
+```json
+{
+  "Authorization": "Bearer <your-token-here>"
+}
+```
