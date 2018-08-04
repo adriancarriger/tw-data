@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My Prisma Service",
   "scripts": {
-    "start": "nodemon --config config/nodemon.json",
+    "start": "nodemon",
     "build": "prisma deploy"
   },
   "devDependencies": {
@@ -13,5 +13,10 @@
   "dependencies": {
     "prisma-binding": "^2.1.0",
     "typescript": "^2.9.2"
+  },
+  "nodemonConfig": {
+    "watch": ["src/**"],
+    "ext": "*",
+    "exec": "yarn run build"
   }
 }

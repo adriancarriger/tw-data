@@ -2,11 +2,11 @@
 endpoint: ${env:PRISMA_ENDPOINT}
 
 # The file containing the definition of your data model.
-datamodel: datamodel.graphql
+datamodel: src/models/datamodel.graphql
 
 # Seed your service with initial data based on `seed.graphql`.
 seed:
-  import: seed.graphql
+  import: src/seeds/default.graphql
 
 hooks:
   post-deploy:
